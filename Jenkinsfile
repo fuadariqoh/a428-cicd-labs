@@ -18,7 +18,7 @@ pipeline {
         }
             stage('Manual Approval') {
             steps {
-                input message: 'Lanjutkan ke tahap Deploy?', ok: 'Proceed', parameters: [choice(choices: ['Proceed', 'Abort'], name: 'action')]
+                input message: 'Lanjutkan ke tahap Deploy? (Klik "Proceed" untuk Mendeploy aplikasi dan Abort untuk membatalkan)'
             }
         }
                stage('Deploy') {
